@@ -1,0 +1,485 @@
+/* Fonts section */
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-weight: 400;
+  src: url("../fonts/play-v19-latin-regular.woff2") format("woff2"),
+    url("../fonts/play-v19-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Play";
+  font-weight: 700;
+  src: url("../fonts/play-v19-latin-700.woff2") format("woff2"),
+    url("../fonts/play-v19-latin-700.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+    url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
+    url("../fonts/roboto-v30-latin-700.woff") format("woff");
+}
+/* End Fonts section */
+
+:root {
+  --beauty-brand-light: #2b7fff;
+  --beauty-brand-dark: #011c44;
+  --paragraph-button: #4a4a4a;
+  --beauty-landing-additional: #fff;
+  --copyright-text: #747272;
+  --text-why-us-section: #000;
+}
+
+/* Base section*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  color: var(--beauty-brand-dark);
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1488px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* End Base section */
+
+/* Header section */
+.header {
+  background-color: lightgray; /*remove*/
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 56px;
+  justify-content: center;
+  margin: 32px 0;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-icon {
+  fill: var(--beauty-brand-dark);
+}
+
+.menu-icon:hover {
+  fill: var(--beauty-brand-light);
+}
+
+/* End Header section */
+
+/* Link section */
+.link {
+  color: var(--beauty-brand-dark);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--beauty-brand-light);
+  font-weight: 700;
+}
+/* End Link section */
+
+/* Hero section */
+.hero-section {
+  display: flex;
+  padding-top: 16px;
+  padding-left: 206px;
+  background-image: url(../images/hero-section-background.jpg),
+    linear-gradient(
+      89deg,
+      #fff 30.62%,
+      rgba(255, 255, 255, 0.85) 41.31%,
+      rgba(255, 255, 255, 0.19) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    );
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.hero-title {
+  color: var(--beauty-brand-light);
+  font-family: Play, sans-serif;
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 0.8;
+  text-transform: capitalize;
+  margin: 0;
+}
+/* End Hero section */
+
+/* Button section*/
+.button {
+  padding: 16px 32px;
+  color: var(--beauty-landing-additional);
+  background-color: var(--beauty-brand-light);
+  font-weight: 600;
+  border: 2px solid #2b7fff;
+  border-radius: 32px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.button:hover {
+  color: var(--beauty-brand-dark);
+  background-color: transparent;
+}
+
+.paragraph-button {
+  color: var(--paragraph-button);
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 10px;
+  margin-bottom: 126px;
+}
+/* End Button section */
+
+/* Section title */
+.section-title {
+  font-family: Play, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.section-title .accent {
+  color: var(--beauty-brand-light);
+}
+
+.section-title.centered {
+  text-align: center;
+}
+/* End section title */
+
+/* About Us section */
+.about-us-section {
+  padding-top: 96px;
+}
+
+.about-us-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-us-content {
+  max-width: 710px;
+}
+
+.about-us-title {
+  margin-bottom: 40px;
+}
+
+.about-us-text {
+  font-size: 22px;
+  line-height: 1.7;
+  margin-top: 40px;
+}
+
+.about-us-text .brand {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.about-us-photo {
+  width: 327px;
+  height: 327px;
+  border-radius: 327px;
+  background: #d9d9d9;
+}
+/* End About Us section */
+
+/* Why Us section */
+.why-us-title,
+.procedures-title,
+.contact-title {
+  margin-bottom: 48px;
+}
+
+.why-us-container {
+  display: flex;
+  justify-content: center;
+}
+
+.why-us-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.why-us-item {
+  flex-basis: calc((100% - 112px) / 3);
+}
+
+.why-us-card {
+  height: 181px;
+  width: 316px;
+  padding: 24px 32px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--beauty-landing-additional);
+  border-radius: 32px;
+  border: 1px solid black; /* remove */
+  box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+}
+
+.why-us-text {
+  color: var(--text-why-us-section);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.why-us-icon {
+  fill: var(--beauty-brand-light);
+}
+/* End Why Us section */
+
+/* Procedures section */
+.procedures-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.procedures-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+}
+
+.procedures-item {
+  flex-basis: calc((100% - 32px) / 3);
+}
+
+.procedures-card {
+  width: 344px;
+  height: 456px;
+  padding: 372px 77px 32px 115px;
+  border: 1px solid black; /*remove*/
+  border-radius: 4px 120px;
+  background: linear-gradient(
+    180deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.73) 84.61%,
+    #011c44 101.39%
+  );
+}
+
+.procedures-text {
+  color: var(--beauty-landing-additional);
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.1;
+}
+/* End Procedures section*/
+
+/* Carousel section */
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  fill: var(--beauty-brand-dark);
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--beauty-brand-dark);
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background-color: var(--beauty-brand-light);
+  fill: var(--beauty-landing-additional);
+}
+
+/* Contact section */
+.contact-section {
+  margin-bottom: 94px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.contact-map {
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: none;
+}
+
+.contact-form {
+  width: 423px;
+  background-color: var(--beauty-brand-dark);
+  border-radius: 32px;
+}
+
+.contact-form-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--beauty-landing-additional);
+  padding: 48px 72px;
+  gap: 32px;
+}
+
+.contact-form-title .accent {
+  color: var(--beauty-brand-light);
+}
+
+.contact-form-paragraph {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--copyright-text);
+  text-align: center;
+  padding: 48px 105px;
+}
+
+/* End Contact section */
+
+/* Footer section */
+footer {
+  background: var(--beauty-brand-dark);
+  padding: 56px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu,
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
+.footer-logo,
+.footer-menu,
+.footer-address {
+  align-items: flex-start;
+  gap: 186px;
+}
+
+.address-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-icon {
+  display: flex;
+  gap: 24px;
+}
+
+.menu-link {
+  color: var(--beauty-landing-additional);
+  font-size: 16px;
+  margin: 8px;
+  text-decoration: none;
+}
+
+.menu-link:hover {
+  color: var(--beauty-brand-light);
+  font-weight: 700;
+}
+
+.address-link {
+  color: var(--beauty-landing-additional);
+  font-size: 16px;
+  margin: 8px;
+  text-decoration: none;
+}
+
+.address-link:hover {
+  color: var(--beauty-brand-light);
+}
+
+.address-icon {
+  fill: var(--beauty-landing-additional);
+}
+
+.address-icon:hover {
+  fill: var(--beauty-brand-light);
+}
+
+.address-copyright {
+  color: var(--copyright-text);
+  font-size: 13px;
+  margin: 8px;
+}
+/* End Footer section */
