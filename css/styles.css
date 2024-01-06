@@ -88,7 +88,12 @@ ul {
 
 /* Header section */
 .header {
-  background-color: lightgray; /*remove*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(5px);
 }
 
 .header-container {
@@ -121,6 +126,7 @@ ul {
 
 .menu-icon {
   fill: var(--beauty-brand-dark);
+  transition: fill 0.2s;
 }
 
 .menu-icon:hover {
@@ -133,27 +139,29 @@ ul {
 .link {
   color: var(--beauty-brand-dark);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .link:hover {
   color: var(--beauty-brand-light);
-  font-weight: 700;
+  /*font-weight: 700;*/
 }
 /* End Link section */
 
 /* Hero section */
 .hero-section {
   display: flex;
-  padding-top: 16px;
+  padding-top: 160px;
   padding-left: 206px;
-  background-image: url(../images/hero-section-background.jpg),
-    linear-gradient(
+  background-image: linear-gradient(
       89deg,
       #fff 30.62%,
       rgba(255, 255, 255, 0.85) 41.31%,
       rgba(255, 255, 255, 0.19) 58.65%,
       rgba(255, 255, 255, 0) 72.78%
-    );
+    ),
+    url(../images/hero-section-background.jpg);
+
   background-repeat: no-repeat;
   background-position: right top;
 }
@@ -179,6 +187,7 @@ ul {
   border-radius: 32px;
   cursor: pointer;
   margin-top: 40px;
+  transition: color 0.2s;
 }
 
 .button:hover {
@@ -242,11 +251,12 @@ ul {
 }
 
 .about-us-photo {
+  position: relative;
   width: 327px;
   height: 327px;
   border-radius: 327px;
-  background: #d9d9d9;
 }
+
 /* End About Us section */
 
 /* Why Us section */
@@ -356,6 +366,10 @@ ul {
   fill: var(--beauty-landing-additional);
 }
 
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+
 /* Contact section */
 .contact-section {
   margin-bottom: 94px;
@@ -404,8 +418,24 @@ ul {
 
 /* Footer section */
 footer {
+  position: relative;
   background: var(--beauty-brand-dark);
   padding: 56px 0;
+}
+
+.footer::after {
+  position: absolute;
+  right: -30px;
+  bottom: -56px;
+  width: 280px;
+  height: 210px;
+  background-image: url(../images/footer-decor/pexels-photo-footer.png);
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.footer-decor {
+  background-image: url(../images/footer-decor/background-vector.png);
 }
 
 .footer-container {
@@ -446,31 +476,24 @@ footer {
   gap: 24px;
 }
 
-.menu-link {
-  color: var(--beauty-landing-additional);
-  font-size: 16px;
-  margin: 8px;
-  text-decoration: none;
-}
-
-.menu-link:hover {
-  color: var(--beauty-brand-light);
-  font-weight: 700;
-}
-
+.menu-link,
 .address-link {
   color: var(--beauty-landing-additional);
   font-size: 16px;
   margin: 8px;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
+.menu-link:hover,
 .address-link:hover {
   color: var(--beauty-brand-light);
+  /*font-weight: 700;*/
 }
 
 .address-icon {
   fill: var(--beauty-landing-additional);
+  transition: fill 0.2s;
 }
 
 .address-icon:hover {
@@ -483,3 +506,41 @@ footer {
   margin: 8px;
 }
 /* End Footer section */
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 100%;
+  max-height: 680px;
+  background-color: var(--beauty-brand-dark);
+  border-radius: 48px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+/* End Modal */

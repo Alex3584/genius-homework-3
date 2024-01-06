@@ -18,8 +18,8 @@
             </a>
             <!-- Menu -->
             <ul class="header-menu">
-              <li><a class="link" href="#why-us-section">Чому ми</a></li>
               <li><a class="link" href="#about-us-section">Про нас</a></li>
+              <li><a class="link" href="#why-us-section">Чому ми</a></li>
               <li>
                 <a class="link" href="#procedures-section">Наші процедури</a>
               </li>
@@ -62,7 +62,9 @@
             zone
           </h1>
           <!--замовити дзвінок -->
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="modal-btn-open button" type="button">
+            Замовити дзвінок
+          </button>
           <p class="paragraph-button">
             Запишись та отримай безкоштовну<br />
             консультацію нашого косметолога
@@ -188,7 +190,7 @@
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-Arrow"></use>
               </svg>
@@ -225,7 +227,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer-decor">
       <div class="container">
         <div class="footer-container">
           <nav class="footer-nav">
@@ -250,47 +252,48 @@
           <address class="footer-address">
             <div class="address-menu">
               <ul class="address-list">
-              <li>
-                <a class="address-link" href="tel:+380960000007"
-                  >+ 38 (096) 000 00 07</a
-                >
-              </li>
-              <li>
-                <a class="address-link" href="mailto:beautyzone@gmail.com"
-                  >beautyzone@gmail.com</a
-                >
-              </li>
-              <li>
-                <a
-                  class="address-link"
-                  href="https://maps.app.goo.gl/y5aWa5rPwrQ2nfjM6"
-                  >Україна, м. Київ,<br> вул. Тараса Шевченка 5</a
-                >
-              </li>
-            </ul>
-            <ul class="footer-icon">
-              <li>
-                <a href="#">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./images/icons.svg#icon-telephone"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg class="address-icon" width="42" height="42">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a class="address-link" href="tel:+380960000007"
+                    >+ 38 (096) 000 00 07</a
+                  >
+                </li>
+                <li>
+                  <a class="address-link" href="mailto:beautyzone@gmail.com"
+                    >beautyzone@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="address-link"
+                    href="https://maps.app.goo.gl/y5aWa5rPwrQ2nfjM6"
+                    >Україна, м. Київ,<br />
+                    вул. Тараса Шевченка 5</a
+                  >
+                </li>
+              </ul>
+              <ul class="footer-icon">
+                <li>
+                  <a href="#">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-telephone"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg class="address-icon" width="42" height="42">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
             <div class="address-info">
               <a class="menu-link" href="#">Політика конфіденційності</a>
@@ -300,5 +303,13 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
